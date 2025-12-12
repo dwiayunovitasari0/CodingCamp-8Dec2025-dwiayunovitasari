@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List - Dwi Ayu Novitasari</title>
+
+    <!-- CSS External File -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Todo List - Dwi Ayu Novitasari</h1>
+        </header>
+
+        <!-- INPUT FORM -->
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Enter a new todo item">
+            <input type="date" id="todo-date">
+        </form>
+
+        <!-- BUTTON ACTIONS -->
+        <div class="button-row">
+            <button class="bg-green-500" onclick="addTodo()">Add Todo</button>
+            <button class="bg-red-500" onclick="resetTodos()">Delete All</button>
+        </div>
+
+        <!-- BUTTON ACTIONS -->
+        <div>
+            <button class="border rounded p-2 bg-blue-500 text-white">Filter</button>
+        </div>
+        <br>
+
+        <!-- TODO TABLE -->
+        <section>
+            <h2 class="table-title" >List Of Todos</h2>
+
+            <table class="todo-table">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="todo-list">
+                    <tr>
+                        <td colspan="4" class="empty">No task found</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Todo List App. All Rights Reserved.</p>
+        </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
